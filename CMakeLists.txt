@@ -3,4 +3,4 @@ project(continuandoLista04 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(continuandoLista04 main.c)
+add_executable(continuandoLista04 lista4.c)

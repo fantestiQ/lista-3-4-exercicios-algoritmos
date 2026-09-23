@@ -24,10 +24,16 @@ int somaArray(int a[], int n) {
     return   a[n-1] + somaArray(a, n - 1);
 }
 int produtoArray(int a[], int n) {
+    if (n == 0)  return 1;
+    return   a[n-1] * produtoArray(a, n - 1);
+}
+
+char inverteString(char *str, int n) {
     if (n == 0) {
-        return 0;
+        return str[0];
     }
-    return   a[n-1] * somaArray(a, n - 1);
+    char l = inverteString(str, n - 1);
+    return l;
 }
 
 int main() {
@@ -36,4 +42,6 @@ int main() {
     int arr[] = {1,2,3,4,5};
     printf("Soma: %d\n", somaArray(arr,5));
     printf("Produto: %d\n", produtoArray(arr,5));
+
+    inverteString("string", 6);
 }
